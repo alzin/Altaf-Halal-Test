@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const footerLinks = {
@@ -34,9 +35,13 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-                <span className="text-sm font-bold text-white font-heading">AF</span>
-              </div>
+              <Image
+                src="/logo.png"
+                alt="Altaf Halal Food"
+                width={36}
+                height={36}
+                className="h-9 w-9 rounded-lg object-contain"
+              />
               <div>
                 <p className="text-sm font-bold leading-tight text-text font-heading">
                   Altaf Halal Food

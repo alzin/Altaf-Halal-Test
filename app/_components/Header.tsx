@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Menu,
   ShoppingCart,
@@ -50,13 +51,17 @@ export function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex shrink-0 cursor-pointer items-center gap-2"
+            aria-label="Altaf Halal Food home page"
+            className="flex shrink-0 cursor-pointer items-center gap-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
           >
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-              <span className="text-sm font-bold text-white font-heading">
-                AF
-              </span>
-            </div>
+            <Image
+              src="/logo.png"
+              alt="Altaf Halal Food - Premium Halal Groceries with AU Halal Certification"
+              width={48}
+              height={48}
+              className="h-9 w-auto sm:h-12"
+              priority
+            />
             <div className="hidden sm:block">
               <p className="text-sm font-bold leading-tight text-text font-heading">
                 Altaf Halal Food
