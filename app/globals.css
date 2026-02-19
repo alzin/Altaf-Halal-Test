@@ -3,18 +3,18 @@
 /* ── Design System: Altaf Halal Food ── */
 
 @theme inline {
-  /* Colors */
-  --color-primary: #4F46E5;
-  --color-secondary: #6366F1;
-  --color-cta: #F97316;
-  --color-cta-hover: #EA580C;
-  --color-surface: #EEF2FF;
-  --color-text: #312E81;
-  --color-text-muted: #6B7280;
-  --color-border: #E2E8F0;
-  --color-success: #16A34A;
-  --color-error: #DC2626;
-  --color-warning: #F59E0B;
+  /* Colors - Inspired by logo's gold/tan and green Islamic palette */
+  --color-primary: #16A34A;        /* Rich Islamic green - main brand color */
+  --color-secondary: #15803D;      /* Deeper green for depth */
+  --color-cta: #D4A574;            /* Gold/tan accent - premium feel */
+  --color-cta-hover: #B8935F;      /* Darker gold on hover */
+  --color-surface: #F0F9F4;        /* Soft green-tinted surface */
+  --color-text: #1E3A2A;           /* Deep green-tinted text */
+  --color-text-muted: #6B7280;     /* Neutral muted text */
+  --color-border: #D1E7DD;         /* Light green border */
+  --color-success: #16A34A;        /* Green for success states */
+  --color-error: #DC2626;          /* Red for errors */
+  --color-warning: #D4A574;        /* Gold for warnings */
   --color-background: #FFFFFF;
 
   /* Fonts */

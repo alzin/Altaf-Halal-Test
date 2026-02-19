@@ -92,7 +92,7 @@ export const categories: Category[] = [
     nameJa: "スパイス・調味料",
     slug: "spices-seasonings",
     image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&h=400&fit=crop",
-    color: "#F59E0B",
+    color: "#D4A574",
     subcategories: [
       { name: "Whole Spices", slug: "whole-spices" },
       { name: "Ground Spices", slug: "ground-spices" },
@@ -122,7 +122,7 @@ export const categories: Category[] = [
     nameJa: "冷凍食品",
     slug: "frozen-foods",
     image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=400&h=400&fit=crop",
-    color: "#0EA5E9",
+    color: "#15803D",
     subcategories: [
       { name: "Samosas & Snacks", slug: "samosas-snacks" },
       { name: "Parathas & Naan", slug: "parathas-naan" },
@@ -137,7 +137,7 @@ export const categories: Category[] = [
     nameJa: "パントリー",
     slug: "pantry-staples",
     image: "https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=400&h=400&fit=crop",
-    color: "#8B5CF6",
+    color: "#B8935F",
     subcategories: [
       { name: "Cooking Oil", slug: "cooking-oil" },
       { name: "Canned Goods", slug: "canned-goods" },
@@ -152,7 +152,7 @@ export const categories: Category[] = [
     nameJa: "スナック・スイーツ",
     slug: "snacks-sweets",
     image: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=400&fit=crop",
-    color: "#EC4899",
+    color: "#D4A574",
     subcategories: [
       { name: "Biscuits & Cookies", slug: "biscuits" },
       { name: "Chips & Namkeen", slug: "chips-namkeen" },
@@ -167,7 +167,7 @@ export const categories: Category[] = [
     nameJa: "飲料",
     slug: "beverages",
     image: "https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=400&h=400&fit=crop",
-    color: "#14B8A6",
+    color: "#16A34A",
     subcategories: [
       { name: "Tea & Chai", slug: "tea-chai" },
       { name: "Juices & Drinks", slug: "juices-drinks" },
@@ -181,7 +181,7 @@ export const categories: Category[] = [
     nameJa: "生鮮食品",
     slug: "fresh-produce",
     image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&h=400&fit=crop",
-    color: "#65A30D",
+    color: "#15803D",
     subcategories: [
       { name: "Vegetables", slug: "vegetables" },
       { name: "Fruits", slug: "fruits" },

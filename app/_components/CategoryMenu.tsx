@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { X, ChevronRight } from "lucide-react";
 import { categories } from "../_data/mock";
 import Link from "next/link";
+import Image from "next/image";
 
 interface CategoryMenuProps {
   isOpen: boolean;
@@ -84,13 +85,14 @@ export function CategoryMenu({ isOpen, onClose }: CategoryMenuProps) {
                     }`}
                   >
                     <div className="flex items-center gap-3">
-                      <div
-                        className="h-8 w-8 rounded-lg"
-                        style={{ backgroundColor: cat.color + "20" }}
-                      >
-                        <div className="flex h-full w-full items-center justify-center text-xs font-bold" style={{ color: cat.color }}>
-                          {cat.name.charAt(0)}
-                        </div>
+                      <div className="relative h-8 w-8 overflow-hidden rounded-lg">
+                        <Image
+                          src={cat.image}
+                          alt={cat.name}
+                          fill
+                          className="object-cover"
+                          sizes="32px"
+                        />
                       </div>
                       <span>{cat.name}</span>
                     </div>
@@ -178,14 +180,14 @@ export function CategoryMenu({ isOpen, onClose }: CategoryMenuProps) {
                   onClick={onClose}
                   className="flex cursor-pointer items-center gap-3 px-4 py-3.5 transition-colors duration-150 hover:bg-surface"
                 >
-                  <div
-                    className="flex h-10 w-10 items-center justify-center rounded-xl text-sm font-bold"
-                    style={{
-                      backgroundColor: cat.color + "20",
-                      color: cat.color,
-                    }}
-                  >
-                    {cat.name.charAt(0)}
+                  <div className="relative h-10 w-10 overflow-hidden rounded-xl">
+                    <Image
+                      src={cat.image}
+                      alt={cat.name}
+                      fill
+                      className="object-cover"
+                      sizes="40px"
+                    />
                   </div>
                   <div className="flex-1">
                     <p className="text-sm font-medium text-text">{cat.name}</p>
