@@ -94,7 +94,7 @@ export default function HomePage() {
               href={`/c/${cat.slug}`}
               className="group flex cursor-pointer flex-col items-center gap-3 rounded-xl border border-border bg-white p-5 text-center transition-all duration-200 hover:border-primary/20 hover:shadow-md hover:-translate-y-0.5"
             >
-              <div className="relative h-14 w-14 overflow-hidden rounded-2xl transition-transform duration-200 group-hover:scale-105">
+              <div className="relative aspect-square w-full overflow-hidden rounded-2xl transition-transform duration-200 group-hover:scale-105">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={cat.image}
