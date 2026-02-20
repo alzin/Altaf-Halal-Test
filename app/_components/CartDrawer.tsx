@@ -7,6 +7,7 @@ import { QuantityStepper } from "./QuantityStepper";
 import { Price } from "./Price";
 import { EmptyState } from "./EmptyState";
 import Link from "next/link";
+import Image from "next/image";
 import { formatPrice } from "../_data/mock";
 
 export function CartDrawer() {
@@ -100,26 +101,16 @@ export function CartDrawer() {
           <>
             <ul className="flex-1 divide-y divide-border overflow-y-auto px-5">
               {items.map((item) => {
-                const gradient: Record<string, string> = {
-                  "fresh-meat": "from-red-100 to-red-50",
-                  "spices-seasonings": "from-amber-100 to-amber-50",
-                  "rice-grains": "from-green-100 to-green-50",
-                  "frozen-foods": "from-sky-100 to-sky-50",
-                  "pantry-staples": "from-violet-100 to-violet-50",
-                  "snacks-sweets": "from-pink-100 to-pink-50",
-                  beverages: "from-teal-100 to-teal-50",
-                  "fresh-produce": "from-lime-100 to-lime-50",
-                };
-                const bg = gradient[item.product.categorySlug] || "from-surface to-white";
-
                 return (
                   <li key={item.product.id} className="flex gap-3 py-4">
-                    <div
-                      className={`h-16 w-16 shrink-0 rounded-lg bg-gradient-to-br ${bg} flex items-center justify-center`}
-                    >
-                      <span className="text-lg font-bold text-text/10 font-heading">
-                        {item.product.name.charAt(0)}
-                      </span>
+                    <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg">
+                      <Image
+                        src={item.product.images[0]}
+                        alt={item.product.name}
+                        fill
+                        className="object-cover"
+                        sizes="64px"
+                      />
                     </div>
                     <div className="min-w-0 flex-1">
                       <Link

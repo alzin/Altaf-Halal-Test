@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import { Search, X } from "lucide-react";
 import { products } from "../_data/mock";
 import Link from "next/link";
+import Image from "next/image";
 import { Price } from "./Price";
 
 interface SearchBarProps {
@@ -89,10 +90,15 @@ export function SearchBar({ variant = "header", className = "" }: SearchBarProps
                   href={`/p/${product.slug}`}
                   className="flex cursor-pointer items-center gap-3 px-4 py-3 transition-colors duration-150 hover:bg-surface"
                 >
-                  <div
-                    className="h-10 w-10 shrink-0 rounded-lg bg-surface"
-                    aria-hidden="true"
-                  />
+                  <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg">
+                    <Image
+                      src={product.images[0]}
+                      alt={product.name}
+                      fill
+                      className="object-cover"
+                      sizes="40px"
+                    />
+                  </div>
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-sm font-medium text-text">
                       {product.name}

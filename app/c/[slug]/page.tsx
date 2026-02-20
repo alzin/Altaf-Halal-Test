@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import { useParams } from "next/navigation";
+import { useState, useMemo, useEffect } from "react";
+import { useParams, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { ChevronRight, PackageSearch } from "lucide-react";
 import { getCategoryBySlug, getProductsByCategory } from "../../_data/mock";
@@ -12,12 +12,21 @@ import { EmptyState } from "../../_components/EmptyState";
 
 export default function CategoryPage() {
   const { slug } = useParams<{ slug: string }>();
+  const searchParams = useSearchParams();
   const category = getCategoryBySlug(slug);
   const allProducts = getProductsByCategory(slug);
 
   const [activeSubcategory, setActiveSubcategory] = useState("");
   const [sortValue, setSortValue] = useState("recommended");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+
+  // Read subcategory from URL parameter
+  useEffect(() => {
+    const subParam = searchParams.get("sub");
+    if (subParam) {
+      setActiveSubcategory(subParam);
+    }
+  }, [searchParams]);
 
   const filtered = useMemo(() => {
     let result = activeSubcategory
