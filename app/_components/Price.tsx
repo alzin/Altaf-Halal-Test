@@ -25,7 +25,7 @@ export function Price({
     : 0;
 
   return (
-    <div className={`flex items-baseline gap-2 ${className}`}>
+    <div className={`flex flex-wrap items-center gap-1.5 ${className}`}>
       <span
         className={`font-bold text-text ${sizeClasses[size]}`}
       >
@@ -33,10 +33,10 @@ export function Price({
       </span>
       {hasDiscount && (
         <>
-          <span className="text-text-muted line-through text-sm">
+          <span className="text-text-muted line-through text-xs">
             {formatPrice(originalAmount)}
           </span>
-          <span className="rounded-full bg-cta/10 px-2 py-0.5 text-xs font-semibold text-cta">
+          <span className="rounded-full bg-cta/10 px-1.5 py-0.5 text-xs font-semibold text-cta">
             -{discount}%
           </span>
         </>

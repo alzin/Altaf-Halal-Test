@@ -83,7 +83,7 @@ export function ProductCard({ product, className = "" }: ProductCardProps) {
 
         <p className="mt-0.5 text-xs text-text-muted">{product.unit}</p>
 
-        <div className="mt-auto flex items-end justify-between pt-2">
+        <div className="mt-auto flex flex-wrap items-center justify-between gap-2 pt-2">
           <Price
             amount={product.price}
             originalAmount={product.originalPrice}
@@ -95,7 +95,7 @@ export function ProductCard({ product, className = "" }: ProductCardProps) {
               type="button"
               onClick={() => addItem(product)}
               aria-label={`Add ${product.name} to cart`}
-              className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg bg-cta text-white shadow-sm transition-all duration-200 hover:bg-cta-hover hover:shadow-md"
+              className="flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-lg bg-cta text-white shadow-sm transition-all duration-200 hover:bg-cta-hover hover:shadow-md"
             >
               <ShoppingCart className="h-4 w-4" />
             </button>
@@ -103,10 +103,10 @@ export function ProductCard({ product, className = "" }: ProductCardProps) {
             <button
               type="button"
               aria-label={`Notify when ${product.name} is back in stock`}
-              className="flex h-9 cursor-pointer items-center gap-1.5 rounded-lg border border-border px-3 text-xs font-medium text-text-muted transition-colors duration-200 hover:border-primary hover:text-primary"
+              className="flex h-9 shrink-0 cursor-pointer items-center gap-1.5 rounded-lg border border-border px-3 text-xs font-medium text-text-muted transition-colors duration-200 hover:border-primary hover:text-primary"
             >
               <Bell className="h-3.5 w-3.5" />
-              Notify
+              <span className="hidden sm:inline">Notify</span>
             </button>
           )}
         </div>
