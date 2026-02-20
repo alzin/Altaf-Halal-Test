@@ -26,6 +26,13 @@ export default function HomePage() {
     <>
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-gradient-to-br from-surface via-white to-primary/5">
+        {/* Background image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+          style={{ backgroundImage: 'url(/hero.png)' }}
+          aria-hidden="true"
+        />
+        
         {/* Subtle floating shapes — antigravity vibe */}
         <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-primary/5 blur-3xl" aria-hidden="true" />
         <div className="pointer-events-none absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-cta/5 blur-3xl" aria-hidden="true" />
