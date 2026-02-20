@@ -25,7 +25,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-surface via-white to-primary/5">
+      <section className="relative min-h-[calc(100vh-80px)] overflow-hidden bg-gradient-to-br from-surface via-white to-primary/5">
         {/* Background image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
@@ -37,17 +37,17 @@ export default function HomePage() {
         <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-primary/5 blur-3xl" aria-hidden="true" />
         <div className="pointer-events-none absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-cta/5 blur-3xl" aria-hidden="true" />
 
-        <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-12 md:pb-24 md:pt-20">
-          <div className="mx-auto max-w-2xl text-center">
+        <div className="relative mx-auto flex min-h-[calc(100vh-80px)] max-w-7xl items-start px-4 pt-16 md:pt-20">
+          <div className="mx-auto w-full max-w-2xl text-center">
             <Badge variant="halal" className="mb-4">
               Certified Halal
             </Badge>
-            <h1 className="mb-4 font-heading text-3xl font-bold leading-tight text-text md:text-5xl md:leading-tight">
-              Premium Halal Groceries
+            <h1 className="mb-4 font-heading text-3xl font-bold leading-tight text-text md:text-5xl md:leading-tight lg:text-6xl">
+              <span className="whitespace-nowrap">Premium Halal Groceries</span>
               <br />
               <span className="text-primary">Delivered to Your Door</span>
             </h1>
-            <p className="mb-8 text-base leading-relaxed text-text-muted md:text-lg">
+            <p className="mb-8 text-base leading-relaxed text-text-muted md:text-lg lg:text-xl">
               Fresh halal meat, authentic spices, and pantry essentials from
               trusted sources worldwide. Serving the Muslim community across
               Japan.
@@ -57,17 +57,17 @@ export default function HomePage() {
             <SearchBar variant="hero" className="mx-auto" />
 
             {/* Quick stats */}
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-text-muted">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-text-muted md:text-base">
               <span className="flex items-center gap-1.5">
-                <ShieldCheck className="h-4 w-4 text-success" />
+                <ShieldCheck className="h-4 w-4 text-success md:h-5 md:w-5" />
                 100% Halal Certified
               </span>
               <span className="flex items-center gap-1.5">
-                <Truck className="h-4 w-4 text-primary" />
+                <Truck className="h-4 w-4 text-primary md:h-5 md:w-5" />
                 Next-Day Delivery
               </span>
               <span className="flex items-center gap-1.5">
-                <Snowflake className="h-4 w-4 text-sky-500" />
+                <Snowflake className="h-4 w-4 text-sky-500 md:h-5 md:w-5" />
                 Cold Chain Fresh
               </span>
             </div>
