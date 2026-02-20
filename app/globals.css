@@ -68,6 +68,17 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 
+/* Remove default webkit search cancel button */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Helper to remove focus ring when a custom wrapper provides focus styling */
+.no-focus-ring:focus-visible {
+  outline: none !important;
+}
+
 /* ── Smooth scrolling ── */
 
 html {

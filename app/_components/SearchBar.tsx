@@ -20,12 +20,12 @@ export function SearchBar({ variant = "header", className = "" }: SearchBarProps
   const filtered =
     query.length >= 2
       ? products
-          .filter(
-            (p) =>
-              p.name.toLowerCase().includes(query.toLowerCase()) ||
-              p.category.toLowerCase().includes(query.toLowerCase())
-          )
-          .slice(0, 5)
+        .filter(
+          (p) =>
+            p.name.toLowerCase().includes(query.toLowerCase()) ||
+            p.category.toLowerCase().includes(query.toLowerCase())
+        )
+        .slice(0, 5)
       : [];
 
   const showResults = isFocused && filtered.length > 0;
@@ -38,16 +38,14 @@ export function SearchBar({ variant = "header", className = "" }: SearchBarProps
   return (
     <div className={`relative ${containerClasses} ${className}`}>
       <div
-        className={`flex items-center gap-2 rounded-xl border bg-white transition-all duration-200 ${
-          isFocused
+        className={`flex items-center gap-2 rounded-xl border bg-white transition-all duration-200 ${isFocused
             ? "border-primary shadow-md"
             : "border-border shadow-sm"
-        } ${isHero ? "px-5 py-3.5" : "px-3 py-2"}`}
+          } ${isHero ? "px-5 py-3.5" : "px-3 py-2"}`}
       >
         <Search
-          className={`shrink-0 text-text-muted ${
-            isHero ? "h-5 w-5" : "h-4 w-4"
-          }`}
+          className={`shrink-0 text-text-muted ${isHero ? "h-5 w-5" : "h-4 w-4"
+            }`}
         />
         <input
           ref={inputRef}
@@ -62,9 +60,8 @@ export function SearchBar({ variant = "header", className = "" }: SearchBarProps
               : "Search products..."
           }
           aria-label="Search products"
-          className={`w-full bg-transparent font-body text-text outline-none placeholder:text-text-muted ${
-            isHero ? "text-base" : "text-sm"
-          }`}
+          className={`no-focus-ring w-full bg-transparent font-body text-text outline-none placeholder:text-text-muted ${isHero ? "text-base" : "text-sm"
+            }`}
         />
         {query && (
           <button
